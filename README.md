@@ -1,5 +1,7 @@
 # Teensy-Maestro-executable
 This is the code to be loaded onto a Teensy 4.1 using the Teensy Loader.
+Note that the name includes reference to the keyer, 
+but the keyer function is not yet implemented.
 1. Make sure the Teensy 4.1 is plugged in to a USB port
 2. Download the .hex file
 3. Download Teensy.exe if it is not already on your computer
