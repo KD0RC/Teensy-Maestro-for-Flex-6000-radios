@@ -1163,7 +1163,7 @@ Wire Wire Line
 	5600 3850 5600 3950
 Wire Wire Line
 	6150 4400 6150 5850
-Text GLabel 2700 5750 2    50   Input ~ 0
+Text GLabel 3000 5750 2    50   Input ~ 0
 KeyOut
 $Comp
 L power:GNDPWR #PWR0142
@@ -1194,22 +1194,22 @@ Text GLabel 3400 3750 0    50   Input ~ 0
 DASH
 Text GLabel 3400 3850 0    50   Input ~ 0
 ST_KEY
-Text GLabel 1850 4800 2    50   Input ~ 0
+Text GLabel 1900 4800 2    50   Input ~ 0
 DOT
 $Comp
 L power:GNDPWR #PWR0143
 U 1 1 5FD479EC
-P 2200 4600
-F 0 "#PWR0143" H 2200 4400 50  0001 C CNN
-F 1 "GNDPWR" H 2204 4446 50  0001 C CNN
-F 2 "" H 2200 4550 50  0001 C CNN
-F 3 "" H 2200 4550 50  0001 C CNN
-	1    2200 4600
+P 1950 4600
+F 0 "#PWR0143" H 1950 4400 50  0001 C CNN
+F 1 "GNDPWR" H 1954 4446 50  0001 C CNN
+F 2 "" H 1950 4550 50  0001 C CNN
+F 3 "" H 1950 4550 50  0001 C CNN
+	1    1950 4600
 	1    0    0    -1  
 $EndComp
-Text GLabel 1850 4700 2    50   Input ~ 0
+Text GLabel 2250 4700 2    50   Input ~ 0
 DASH
-Text GLabel 1750 6650 2    50   Input ~ 0
+Text GLabel 1800 6650 2    50   Input ~ 0
 ST_KEY
 $Comp
 L power:GNDPWR #PWR0144
@@ -1225,40 +1225,38 @@ $EndComp
 $Comp
 L Transistor_BJT:2N3904 Q1
 U 1 1 5FD22423
-P 2100 5750
-F 0 "Q1" V 2291 5796 50  0000 L CNN
-F 1 "2N3904" H 2291 5705 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 2300 5675 50  0001 L CIN
-F 3 "https://www.onsemi.com/pub/Collateral/2N3903-D.PDF" H 2100 5750 50  0001 L CNN
-	1    2100 5750
+P 2400 5750
+F 0 "Q1" H 2591 5796 50  0000 L CNN
+F 1 "2N3904" H 2550 5650 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 2600 5675 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/2N3903-D.PDF" H 2400 5750 50  0001 L CNN
+	1    2400 5750
 	-1   0    0    -1  
 $EndComp
 $Comp
 L power:GNDPWR #PWR0145
 U 1 1 5FD3E3E6
-P 2000 5950
-F 0 "#PWR0145" H 2000 5750 50  0001 C CNN
-F 1 "GNDPWR" H 2004 5796 50  0001 C CNN
-F 2 "" H 2000 5900 50  0001 C CNN
-F 3 "" H 2000 5900 50  0001 C CNN
-	1    2000 5950
+P 2300 5950
+F 0 "#PWR0145" H 2300 5750 50  0001 C CNN
+F 1 "GNDPWR" H 2304 5796 50  0001 C CNN
+F 2 "" H 2300 5900 50  0001 C CNN
+F 3 "" H 2300 5900 50  0001 C CNN
+	1    2300 5950
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1750 5550 2000 5550
 $Comp
 L Device:R R5
 U 1 1 5FD482F8
-P 2450 5750
-F 0 "R5" V 2243 5750 50  0000 C CNN
-F 1 "1K" V 2334 5750 50  0000 C CNN
-F 2 "" V 2380 5750 50  0001 C CNN
-F 3 "~" H 2450 5750 50  0001 C CNN
-	1    2450 5750
+P 2750 5750
+F 0 "R5" V 2543 5750 50  0000 C CNN
+F 1 "1K" V 2634 5750 50  0000 C CNN
+F 2 "" V 2680 5750 50  0001 C CNN
+F 3 "~" H 2750 5750 50  0001 C CNN
+	1    2750 5750
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	2600 5750 2700 5750
+	2900 5750 3000 5750
 Wire Wire Line
 	6950 1300 7350 1300
 $Comp
@@ -1339,8 +1337,6 @@ F 3 "~" H 1650 4700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1850 4600 2200 4600
-Wire Wire Line
 	1750 5450 1850 5450
 $Comp
 L Connector:AudioJack2 J2
@@ -1372,4 +1368,120 @@ Text Notes 650  5650 0    59   ~ 12
 Radio Key Line
 Text Notes 950  4900 0    59   ~ 12
 Paddles
+$Comp
+L Device:C C1
+U 1 1 5FF9FDB3
+P 1850 4950
+F 0 "C1" H 1965 4996 50  0000 L CNN
+F 1 ".01" H 1965 4905 50  0000 L CNN
+F 2 "" H 1888 4800 50  0001 C CNN
+F 3 "~" H 1850 4950 50  0001 C CNN
+	1    1850 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDPWR #PWR?
+U 1 1 5FFBFE7A
+P 1850 5100
+F 0 "#PWR?" H 1850 4900 50  0001 C CNN
+F 1 "GNDPWR" H 1854 4946 50  0001 C CNN
+F 2 "" H 1850 5050 50  0001 C CNN
+F 3 "" H 1850 5050 50  0001 C CNN
+	1    1850 5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1850 4800 1900 4800
+Connection ~ 1850 4800
+$Comp
+L Device:C C2
+U 1 1 5FFE36D5
+P 2200 4950
+F 0 "C2" H 2315 4996 50  0000 L CNN
+F 1 ",01" H 2315 4905 50  0000 L CNN
+F 2 "" H 2238 4800 50  0001 C CNN
+F 3 "~" H 2200 4950 50  0001 C CNN
+	1    2200 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDPWR #PWR?
+U 1 1 5FFE54D6
+P 2200 5100
+F 0 "#PWR?" H 2200 4900 50  0001 C CNN
+F 1 "GNDPWR" H 2204 4946 50  0001 C CNN
+F 2 "" H 2200 5050 50  0001 C CNN
+F 3 "" H 2200 5050 50  0001 C CNN
+	1    2200 5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1850 4600 1950 4600
+Wire Wire Line
+	1850 4700 2200 4700
+Wire Wire Line
+	2200 4700 2200 4800
+Wire Wire Line
+	2200 4700 2250 4700
+Connection ~ 2200 4700
+$Comp
+L Device:C C4
+U 1 1 60015F1D
+P 1750 6800
+F 0 "C4" H 1865 6846 50  0000 L CNN
+F 1 ".01" H 1865 6755 50  0000 L CNN
+F 2 "" H 1788 6650 50  0001 C CNN
+F 3 "~" H 1750 6800 50  0001 C CNN
+	1    1750 6800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDPWR #PWR?
+U 1 1 60018854
+P 1750 6950
+F 0 "#PWR?" H 1750 6750 50  0001 C CNN
+F 1 "GNDPWR" H 1754 6796 50  0001 C CNN
+F 2 "" H 1750 6900 50  0001 C CNN
+F 3 "" H 1750 6900 50  0001 C CNN
+	1    1750 6950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1750 6650 1800 6650
+Connection ~ 1750 6650
+$Comp
+L Device:C C3
+U 1 1 60036514
+P 1750 5700
+F 0 "C3" H 1865 5746 50  0000 L CNN
+F 1 ".01" H 1865 5655 50  0000 L CNN
+F 2 "" H 1788 5550 50  0001 C CNN
+F 3 "~" H 1750 5700 50  0001 C CNN
+	1    1750 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDPWR #PWR?
+U 1 1 600375D6
+P 1750 5850
+F 0 "#PWR?" H 1750 5650 50  0001 C CNN
+F 1 "GNDPWR" H 1754 5696 50  0001 C CNN
+F 2 "" H 1750 5800 50  0001 C CNN
+F 3 "" H 1750 5800 50  0001 C CNN
+	1    1750 5850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1750 5550 2300 5550
+Connection ~ 1750 5550
+Text Notes 600  7250 0    67   ~ 0
+Note: Mono jacks are shown, but stereo jacks
+Text Notes 600  7350 0    67   ~ 0
+can be used, just leave the ring unconnected.
+Text Notes 6600 5850 0    87   ~ 0
+Note: All switch and encoder inputs should be bypassed to ground
+Text Notes 6600 6000 0    87   ~ 0
+with .01 uf disc ceramic caps.  They are not shown on this
+Text Notes 6600 6150 0    87   ~ 0
+schematic due to author laziness.
 $EndSCHEMATC
