@@ -1,0 +1,48 @@
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+FlexRig	 KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+connect	 KEYWORD2
+readEthernetData	KEYWORD2
+readVita49Data	KEYWORD2
+parseStatus	KEYWORD2
+initBuffer	KEYWORD2
+send	KEYWORD2
+findAFlex	KEYWORD2
+isAFlex	KEYWORD2
+startReceiver	KEYWORD2
+stopReceiver	KEYWORD2
+updateObject	KEYWORD2
+removeFromCommandList	KEYWORD2
+addToCommandList	KEYWORD2
+sendAllCommands	KEYWORD2
+updateStatus	KEYWORD2
+setValue	KEYWORD2	
+#######################################
+# Instances (KEYWORD2)
+#######################################
+ipAddress	KEYWORD2
+modelName	KEYWORD2
+serial	KEYWORD2
+nickName	KEYWORD2
+connected	KEYWORD2
+radio	KEYWORD2
+transmit	KEYWORD2
+interlock	KEYWORD2
+panadapter	KEYWORD2
+waterfall	KEYWORD2
+atu	KEYWORD2
+vfo	KEYWORD2
+nMaxSlice	KEYWORD2
+nMaxPanadapter	KEYWORD2
+activePanadapter	KEYWORD2
+nMaxWaterfall	KEYWORD2
+updated	KEYWORD2
+#######################################
+# Constants (LITERAL1)
+#######################################
+	
