@@ -196,4 +196,3 @@ void configureTransmitEvents() {
 // void onTransmit_mic_selection() {
    // Serial.println("onTransmit_mic_selection() event!");
 // }
-

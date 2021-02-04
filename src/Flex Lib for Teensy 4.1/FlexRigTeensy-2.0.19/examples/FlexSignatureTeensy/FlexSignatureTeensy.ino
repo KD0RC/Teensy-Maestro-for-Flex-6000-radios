@@ -1,18 +1,46 @@
-#include <SPI.h>
-#include <Ethernet.h>
-#include <FlexRig.h>
-#include <UTFT.h>
+//#include <SPI.h>
+//#include <Ethernet.h>
+//#include <FlexRig.h>
+//#include <UTFT.h>
 
-extern "C" {
+#include "T4_PowerButton.h"
+
+#include <SPI.h>
+
+#include "HX8357_t3n.h"
+#include "ili9341_t3n_font_Arial.h"       // for the HX8357, not ili9341
+#include "ili9341_t3n_font_ArialBold.h"   // for the HX8357, not ili9341
+#include <ILI9341_t3n_font_ComicSansMS.h> // for the HX8357, not ili9341
+
+#include <SD.h>
+#include "NativeEthernet.h"
+#include <FlexRigTeensy.h>
+#include "Encoder.h"
+
+#include <EEPROM.h>
+
+#include <Wire.h>
+#include "Adafruit_STMPE610.h"  // I2C connected resistive touch screen controller
+// Option #1 - uses I2C, connect to hardware I2C port only! (T4.x SDA = pin 18, SCL = pin 19)
+// tie MODE to GND and POWER CYCLE (there is no reset pin)
+Adafruit_STMPE610 touch = Adafruit_STMPE610();
+
+extern "C" 
+{
   typedef void (*genericHandlerFunction)(void);
 }
 
 #define BAUD_RATE 115200
 
-FlexRig fRig;
+// For the Adafruit HX8357 TFT display, these are the default.
+const byte TFT_DC = 9;
+const byte TFT_CS = 10;
+const byte TFT_RST = 8;
 
-//DISPLAY SETUP
-UTFT myGLCD(ITDB50,25,26,27,28);  // 5" display
+// Use hardware SPI.  MOSI = pin 11, MISO = pin 12, SCK = pin 13
+HX8357_t3n tft = HX8357_t3n(TFT_CS, TFT_DC, TFT_RST);
+
+FlexRig fRig;
 
 //int SCREEN_HEIGHT;
 //int SCREEN_WIDTH;
@@ -28,27 +56,32 @@ void setup() {
   
   Serial.println("=== Started DHCP request");
   
-  //setColor(VGA_WHITE,VGA_BLACK);
-  myGLCD.print(F("Waiting for IP Address       "), 100, 200);
+  tft.begin();
+  tft.setRotation(3);
+  tft.setFont(Arial_14);
+  tft.fillScreen(HX8357_NAVY);
+  tft.setTextColor(HX8357_YELLOW);
+  tft.setCursor(0, 0);
+  tft.print("Waiting for IP Address       ");
   getIpAddress();
   //getFixedIpAddress();
-  //myGLCD.print(F("My IP is: "), 100, 250);
+  tft.print("My IP is: ");
   String addr=String(Ethernet.localIP()[0]) + "." +
               String(Ethernet.localIP()[1]) + "." +
               String(Ethernet.localIP()[2]) + "." +
-              String(Ethernet.localIP()[3]);
-  //myGLCD.print(addr, 270, 250);  
+              String(Ethernet.localIP()[3]); 
+   tft.println(addr);
     
-  fRig=FlexRig::findAFlex(NULL); 
-  //fRig=FlexRig::findAFlex("2114-420A-6300-3136");  
+  fRig=FlexRig::findAFlex(NULL);   
   fRig.connect(); 
-  if (fRig.connected) {
-    myGLCD.print("Connected to Flex Rig      ", 100, 250);
-    //myGLCD.print("Initializing GUI ...       ", 100, 300);
+  if (fRig.connected) 
+  {
+    tft.println();
+    tft.print("Connected to: "); tft.print(fRig.nickName); tft.print("  Ser: "); tft.println(fRig.serial);
+    tft.print("Model: "); tft.print(fRig.modelName); tft.print("  Ver. "); tft.println(fRig.softVersion);
 
     Serial.println("Connected");
     
-
     int d=millis();
     while ((millis()-d)<2000) {  //simulating main loop
       fRig.process();            //and processing intial rig data
@@ -68,7 +101,8 @@ void setup() {
      
 }
 
-void loop() {
+void loop() 
+{
   fRig.fireEvents();
   fRig.process();
 }

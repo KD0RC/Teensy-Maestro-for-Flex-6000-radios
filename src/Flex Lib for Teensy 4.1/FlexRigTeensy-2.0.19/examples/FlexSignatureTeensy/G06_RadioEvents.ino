@@ -75,4 +75,3 @@ void configureRadioEvents() {
 // void onRadio_binaural_rx() {
   // Serial.println("onRadio_binaural_rx() event!");
 // }
-
