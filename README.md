@@ -15,4 +15,4 @@ Using the Teensy.exe Loader to program the Teensy board
 7. Click the Program button on the Teensy board to start the download
 
 ![Image text](https://github.com/KD0RC/Teensy-Maestro-for-Flex-6000-radios/blob/master/images/TeensyMaestro.JPG)
-
+![Image text](https://github.com/KD0RC/Teensy-Maestro-for-Flex-6000-radios/blob/master/images/IMG_20201115_213850789_HDR.jpg)
