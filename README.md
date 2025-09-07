@@ -6,8 +6,9 @@ While the TeensyMaestro has a color touch screen, it does not display a panadapt
 
 August 2025 - Version 2 of the software is available!  It continues to support the original hardware (HW V1) using the HX8357 display and discrete address-line multiplexers.  It now also supports the PC board designed by Simon, NV0E (HW V2) using the ST7796S display and MCP 23008 and 23017 I2C addressed multiplexers.  You can build V2 hardware with point-to-point wiring or using Simon's board.  V2 will be significantly cheaper and give you a slightly larger display.  Operationally, they are indistinguishable.  At least for now, there will be two load images available, one for V1 hardware and one for V2.  There will continue to be one source code file using compiler directives to generate V1 or V2.
 
-Link to Simon's board and front panel:
-https://github.com/rimuadmin/TeensyMaestro-Hardware
+Link to Simon's board and front panel (Hardware Version 2):
+https://github.com/rimuadmin/TeensyMaestro-Hardware    
+NOTE: Use the BOM from Simon's page if you use his PC boards or point-to-point wire one using his schematic (ST7796S display and I2C multiplexers).
 
 Using the Teensy.exe Loader to program the Teensy board
 
