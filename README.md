@@ -1,4 +1,4 @@
-# Teensy-Maestro-for-Flex-6000-radios
+# TeensyMaestro for Flex 6000, 8000 and Aurora radios
 The TeensyMaestro is a Teensy (Arduino work-alike) based set of controls for the FlexRadio 6000, 8000 and Aurora series.  It provides knobs, buttons, display and a keyer.  It is designed to augment SmartSDR (SSDR), not replace it.  There are many functions that the TeensyMaestro cannot perform that still need to be done using SSDR or a real Maestro.
 The TeensyMaestro uses a USB cable for power and an ethernet cable to connect with the radio.  All communication with the radio is via TCP/IP, not the USB cable.
 The primary design goal was to provide the most used controls in the form of knobs and buttons while retaining all the power and convenience of the computer-based SSDR.  It uses the extensive TCP/IP Application Programming Interface (API) provided by FlexRadio.  It also leverages the Flex Arduino library built by Enzo, IW7DMH.  Without this library, the TeensyMaestro would not have been built.
